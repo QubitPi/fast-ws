@@ -51,7 +51,7 @@ documentation contain further details on how to proceed next.
 
 ### Deploying Documentation to GitHub Pages
 
-- Change the domain in [CNAME file](https://github.com/QubitPi/fast-ws/blob/master/docs/CNAME)
+- Change the domain in [CI/CD `documentation` job](https://github.com/QubitPi/fast-ws/blob/master/.github/workflows/ci-cd.yaml)
 - DOCKERHUB_TOKEN
 
 [JAX-RS]: https://jcp.org/en/jsr/detail?id=370
