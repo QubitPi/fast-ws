@@ -241,9 +241,9 @@ resources explicitly by telling IntelliJ where those resources are:
 We use 4-space as tab. This can be configured at __Code Style__ -> __Java__ -> __Tabs and Indents__ with the following
 settings:
 
-Tab size: 4
-Indent: 4
-Continuation indent: 8
+- Tab size: 4
+- Indent: 4
+- Continuation indent: 8
 
 If tabs still come out at 2 spaces when hitting TAB or Enter, not 4 spaces, try:
 
