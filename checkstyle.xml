@@ -181,7 +181,7 @@
             <property name="severity" value="error"/>
         </module>
         <module name="NonEmptyAtclauseDescription">
-            <property name="javadocTokens" value="	PARAM_LITERAL, RETURN_LITERAL, THROWS_LITERAL, DEPRECATED_LITERAL"/>
+            <property name="javadocTokens" value="PARAM_LITERAL, RETURN_LITERAL, THROWS_LITERAL, DEPRECATED_LITERAL"/>
             <property name="severity" value="error"/>
         </module>
         <module name="SummaryJavadocCheck">
