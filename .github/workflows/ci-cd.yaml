@@ -23,8 +23,6 @@ name: CI/CD
 env:
   JDK_VERSION: 17
   JDK_DISTRIBUTION: 'adopt'
-  USER: QubitPi
-  EMAIL: jack20220723@gmail.com
 
 jobs:
   cancel-previous:
@@ -110,8 +108,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/build
           enable_jekyll: false
-          user_name: ${{ env.USER }}
-          user_email: ${{ env.EMAIL }}
+          user_name: QubitPi
+          user_email: jack20220723@gmail.com
           cname: fastws.qubitpi.org
 
   docker-image:
@@ -151,3 +149,16 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: jack20191124/fast-ws
           readme-filepath: README.md
+
+  triggering:
+    name: Triggering Acceptance Tests
+    if: github.ref == 'refs/heads/master'
+    needs: docker-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Acceptance Tests
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.FASTWS_DOWNSTREAM_CICD_TRIGGERING_TOKEN }}
+          repository: QubitPi/fast-ws-acceptance-tests
+          event-type: fast-ws-changes
