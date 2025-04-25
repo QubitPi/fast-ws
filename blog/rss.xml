@@ -1404,11 +1404,9 @@ and the TCK(test) are and how they embodied new EE features.</p>
 have a new and separate process for that. It's the Eclipse Foundation Specification Process
 (<a href="https://www.eclipse.org/projects/efsp/" target="_blank" rel="noopener noreferrer">EFSP</a>) and it's an extension of the
 <a href="https://www.eclipse.org/projects/dev_process" target="_blank" rel="noopener noreferrer">Eclipse Development Process</a>.</p>
-<p>There are
-<a href="https://blogs.eclipse.org/post/tanja-obradovic/how-eclipse-foundation-specification-process-efsp-different-java-community" target="_blank" rel="noopener noreferrer">some important differences</a>,
-though, mostly around "Transparency, Openness, Shared Burden and Vendor Neutrality"". The EFSP organizers, for example,
-envision collaborative working groups that are vendor-neutral, a certification process that is self-service, and an
-organization that operates and governs as a meritocracy.</p>
+<p>There are some important differences, though, mostly around "Transparency, Openness, Shared Burden and Vendor
+Neutrality". The EFSP organizers, for example, envision collaborative working groups that are vendor-neutral, a
+certification process that is self-service, and an organization that operates and governs as a meritocracy.</p>
 <h3 class="anchor anchorWithStickyNavbar_L1yj" id="jsrs">JSRs<a href="https://fastws.qubitpi.org/blog/java-ee#jsrs" class="hash-link" aria-label="Direct link to JSRs" title="Direct link to JSRs">​</a></h3>
 <p>In the JCP, the first step to adding a feature to EE was to create a JSR or Java Specification Request. The JSR was a
 bit like the interface for an EE feature. The JCP Executive Committee reviewed and approved a completed JSR, and then
