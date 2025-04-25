@@ -106,11 +106,9 @@ have a new and separate process for that. It's the Eclipse Foundation Specificat
 ([EFSP](https://www.eclipse.org/projects/efsp/)) and it's an extension of the
 [Eclipse Development Process](https://www.eclipse.org/projects/dev_process).
 
-There are
-[some important differences](https://blogs.eclipse.org/post/tanja-obradovic/how-eclipse-foundation-specification-process-efsp-different-java-community),
-though, mostly around "Transparency, Openness, Shared Burden and Vendor Neutrality"". The EFSP organizers, for example,
-envision collaborative working groups that are vendor-neutral, a certification process that is self-service, and an
-organization that operates and governs as a meritocracy.
+There are some important differences, though, mostly around "Transparency, Openness, Shared Burden and Vendor
+Neutrality". The EFSP organizers, for example, envision collaborative working groups that are vendor-neutral, a
+certification process that is self-service, and an organization that operates and governs as a meritocracy.
 
 ### JSRs
 
