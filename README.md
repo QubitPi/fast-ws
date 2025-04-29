@@ -2,6 +2,7 @@ FastWS
 ======
 
 ![Java Version Badge][Java Version Badge]
+[![Docker Hub][Docker Pulls Badge]][Docker Hub URL]
 [![GitHub Workflow Status][GitHub Workflow Status]](https://github.com/QubitPi/fast-ws/actions/workflows/ci-cd.yaml)
 [![Apache License Badge]][Apache License, Version 2.0]
 
@@ -23,7 +24,7 @@ organization to improve the velocity and quality of their teams' work
 
 Please make sure Docker is installed
 ([_Installing Docker_](https://docker.qubitpi.org/desktop/setup/install/mac-install/)), then execute this on-click
-commands:
+command:
 
 ```console
 docker run --name=fast-ws -it -p 8080:8080 jack20191124/fast-ws
@@ -32,16 +33,16 @@ docker run --name=fast-ws -it -p 8080:8080 jack20191124/fast-ws
 That's it. A healthcheck endpoint can be pinned with
 
 ```console
-curl -v localhost:8080/v1/data/healthcheck
+curl -v localhost:8080/v1/healthcheck
 ```
 
 which would gave
 
 ```console
-$ curl -v localhost:8080/v1/data/healthcheck
+$ curl -v localhost:8080/v1/healthcheck
 *   Trying 127.0.0.1:8080...
 * Connected to localhost (127.0.0.1) port 8080 (#0)
-> GET /v1/data/healthcheck HTTP/1.1
+> GET /v1/healthcheck HTTP/1.1
 > Host: localhost:8080
 > User-Agent: curl/7.85.0
 > Accept: */*
@@ -66,6 +67,8 @@ The use and distribution terms for [fast-ws]() are covered by the [Apache Licens
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License, Version 2.0]: https://www.apache.org/licenses/LICENSE-2.0
 
+[Docker Pulls Badge]: https://img.shields.io/docker/pulls/jack20191124/fast-ws?style=for-the-badge&logo=docker&color=2596EC
+[Docker Hub URL]: https://hub.docker.com/r/jack20191124/fast-ws
 [Documentation]: https://fastws.qubitpi.org/
 
 [GitHub templates]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository#about-template-repositories
