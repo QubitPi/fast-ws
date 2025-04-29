@@ -23,7 +23,7 @@ import org.eclipse.jetty.server.Server
 import io.restassured.RestAssured
 import spock.lang.Specification
 
-class DataServletITSpec extends Specification {
+class HealthcheckServletITSpec extends Specification {
 
     static final int PORT = 8080
 
@@ -41,7 +41,7 @@ class DataServletITSpec extends Specification {
         expect:
         RestAssured.given()
                 .when()
-                .get("/data/healthcheck")
+                .get("/healthcheck")
                 .then()
                 .statusCode(200)
 

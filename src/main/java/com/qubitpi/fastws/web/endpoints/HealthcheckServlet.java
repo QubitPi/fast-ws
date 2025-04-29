@@ -33,9 +33,9 @@ import net.jcip.annotations.ThreadSafe;
 @Singleton
 @Immutable
 @ThreadSafe
-@Path("/data")
+@Path("/healthcheck")
 @Produces(MediaType.APPLICATION_JSON)
-public class DataServlet {
+public class HealthcheckServlet {
 
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 
@@ -43,7 +43,7 @@ public class DataServlet {
      * Constructor for dependency injection.
      */
     @Inject
-    public DataServlet() {
+    public HealthcheckServlet() {
         // intentionally left blank
     }
 
@@ -53,7 +53,6 @@ public class DataServlet {
      * @return 200 OK response
      */
     @GET
-    @Path("/healthcheck")
     public Response healthcheck() {
         return Response
                 .status(Response.Status.OK)

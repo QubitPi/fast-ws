@@ -59,7 +59,7 @@ class DockerITSpec extends Specification {
         expect:
         RestAssured.given()
                 .when()
-                .get("/data/healthcheck")
+                .get("/healthcheck")
                 .then()
                 .statusCode(200)
     }
