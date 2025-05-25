@@ -38,7 +38,7 @@ Make sure to execute the `sudo ln -sfn`, `echo 'export PATH=...`, and the `expor
 
 :::tip
 
-FastWS is built using maven. Maven uses a separate JDK version, which can be seen via `mvn -v`. If it's not JDK 17, we
+FastWS is built using maven, which uses a separate JDK version. This can be seen via `mvn -v`. If it's not JDK 17, we
 should have Maven point to our JDK 17 using [JAVA_HOME](https://stackoverflow.com/a/2503679):
 
 ```bash
@@ -62,8 +62,8 @@ OpenJDK 64-Bit Server VM (build 17.0.10+9, mixed mode)
 ### Installing Docker Engine
 
 FastWS has [Docker-based integration tests]; it also supports
-[running template webserivce in Docker][fast-ws Dockerfile]. Docker can be installed by following its
-[official instructions](https://docs.docker.com/desktop/install/mac-install/)
+[running template webserivce in Docker][fast-ws Dockerfile]. Docker can be installed by following
+[this instruction](https://docker.qubitpi.org/desktop/setup/install/mac-install/)
 
 Getting Source Code
 -------------------
