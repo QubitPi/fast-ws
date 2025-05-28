@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.qubitpi.fastws.web.endpoints;
+package org.qubitpi.fastws.web.endpoints;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

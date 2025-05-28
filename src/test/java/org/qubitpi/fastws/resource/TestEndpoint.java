@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.qubitpi.fastws.resource;
+package org.qubitpi.fastws.resource;
 
-import com.qubitpi.fastws.JettyServerFactory;
+import org.qubitpi.fastws.JettyServerFactory;
 
 import org.glassfish.jersey.server.ResourceConfig;
 

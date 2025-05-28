@@ -13,37 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.qubitpi.fastws
+package org.qubitpi.fastws.web.endpoints
 
-import com.qubitpi.fastws.resource.TestEndpoint
+import org.qubitpi.fastws.JettyServerFactory
+import org.qubitpi.fastws.application.ResourceConfig
 
 import org.eclipse.jetty.server.Server
-import org.glassfish.jersey.server.ResourceConfig
 
 import io.restassured.RestAssured
-import jakarta.inject.Inject
-import jakarta.ws.rs.ApplicationPath
 import spock.lang.Specification
 
-class JettyServerFactorySpec extends Specification {
+class HealthcheckServletITSpec extends Specification {
 
     static final int PORT = 8080
-    static final String ENDPOINT_RESOURCE_PACKAGE = TestEndpoint.class.getPackage().getName()
-
-    /**
-     * DI constructor.
-     * <p>
-     * CAUTION: the {@code @ApplicationPath("v1")} is not taking effects. See {@link JettyServerFactory} for more
-     * details.
-     */
-    @ApplicationPath("v1")
-    class TestResourceConfig extends ResourceConfig {
-
-        @Inject
-        TestResourceConfig() {
-            packages(ENDPOINT_RESOURCE_PACKAGE)
-        }
-    }
 
     def setupSpec() {
         RestAssured.baseURI = "http://localhost"
@@ -51,21 +33,17 @@ class JettyServerFactorySpec extends Specification {
         RestAssured.basePath = "/v1"
     }
 
-    def "Factory produces Jersey-Jetty applications"() {
+    def "Healthchecking endpoints returns 200"() {
         setup:
-        Server server = JettyServerFactory.newInstance(PORT, "/v1/*", new TestResourceConfig())
+        Server server = JettyServerFactory.newInstance(PORT, "/v1/*", new ResourceConfig())
         server.start()
 
         expect:
-        RestAssured
+        RestAssured.given()
                 .when()
-                .get("/v1/example/test")
+                .get("/healthcheck")
                 .then()
                 .statusCode(200)
-
-        RestAssured
-                .when()
-                .get("/v1/example/test").asString() == "SUCCESS"
 
         cleanup:
         server.stop()
