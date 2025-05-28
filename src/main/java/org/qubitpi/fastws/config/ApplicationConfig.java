@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.qubitpi.fastws.config;
+package org.qubitpi.fastws.config;
 
 import org.aeonbits.owner.Config;
 

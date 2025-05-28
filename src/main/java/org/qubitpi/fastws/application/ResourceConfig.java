@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.qubitpi.fastws.application;
+package org.qubitpi.fastws.application;
 
-import com.qubitpi.fastws.web.endpoints.HealthcheckServlet;
-import com.qubitpi.fastws.web.filters.CorsFilter;
+import org.qubitpi.fastws.web.endpoints.HealthcheckServlet;
+import org.qubitpi.fastws.web.filters.CorsFilter;
 
 import org.glassfish.hk2.utilities.Binder;
 

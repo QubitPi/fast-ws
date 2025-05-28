@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.qubitpi.fastws.application
+package org.qubitpi.fastws.application
 
-import com.qubitpi.fastws.web.filters.CorsFilter
 
 import org.glassfish.jersey.internal.inject.Binder
+import org.qubitpi.fastws.web.filters.CorsFilter
 
 import spock.lang.Specification
 
