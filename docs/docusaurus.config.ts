@@ -31,9 +31,6 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -60,8 +57,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/logo.png',
     navbar: {
       title: 'FastWS',
       logo: {
@@ -83,8 +79,9 @@ const config: Config = {
         },
         {
           href: 'https://github.com/QubitPi/fast-ws',
-          label: 'GitHub',
+          label: ' ',
           position: 'right',
+          className: 'header-icon-link header-github-link',
         },
       ],
     },
@@ -98,15 +95,35 @@ const config: Config = {
               label: 'Documentation',
               to: '/docs/intro',
             },
+            {
+              label: 'Jersey Framework',
+              href: 'https://jersey.qubitpi.org/',
+            },
+            {
+                label: 'Jetty Server',
+                href: 'https://jetty.qubitpi.org/',
+            },
+            {
+                label: 'Owner Configuration Library',
+                href: 'https://owner.qubitpi.org/',
+            },
+            {
+                label: 'Groovy Spock (Testing)',
+                href: 'https://spock.qubitpi.org/',
+            },
           ],
         },
         {
-          title: 'Community',
+          title: 'Webservice Standards',
           items: [
-            {
-              label: 'GitHub Issues',
-              href: 'https://github.com/QubitPi/fast-ws/issues',
-            },
+              {
+                label: 'Jakarta RESTful Web Services',
+                href: 'https://jakartaee-rest.qubitpi.org',
+              },
+              {
+                label: 'JSR 330 - Dependency Injection',
+                href: 'https://javax-inject.qubitpi.org',
+              },
           ],
         },
         {
@@ -137,7 +154,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["java", "bash", "json"]
-    }
+    },
   } satisfies Preset.ThemeConfig,
 };
 
