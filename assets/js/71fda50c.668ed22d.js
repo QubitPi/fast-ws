@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[9468],{8929:s=>{s.exports=JSON.parse('{"label":"Oracle","permalink":"/blog/tags/oracle","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

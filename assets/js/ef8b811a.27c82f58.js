@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[8947],{6600:t=>{t.exports=JSON.parse('{"authors":[{"name":"Jiaqi Liu","title":"Maintainer of FastWS","url":"https://github.com/QubitPi","imageURL":"https://avatars.githubusercontent.com/u/16126939?v=4","key":"jiaqi","page":null,"count":20}]}')}}]);
