@@ -16,7 +16,6 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import { useColorMode } from '@docusaurus/theme-common'
 
 type FeatureItem = {
   title: string;
@@ -29,7 +28,6 @@ const FeatureList: FeatureItem[] = [
     title: 'Caring for Developers',
     Svg: require('@site/static/img/developer.svg').default,
     scale: 1,
-    id: 'not-used',
     description: (
       <>
         We understand a good business product is backed by developers who love their works. We let them free to do what
@@ -41,7 +39,6 @@ const FeatureList: FeatureItem[] = [
     title: 'Focus on What Matters',
     Svg: require('@site/static/img/business.svg').default,
     scale: 1,
-    id: 'not-used',
     description: (
       <>
         FastWS lets us focus on our business logics, and the template will do the chores.
@@ -52,7 +49,6 @@ const FeatureList: FeatureItem[] = [
     title: 'Production Quality',
     Svg: require('@site/static/img/high-quality.svg').default,
     scale: 0.75,
-    id: 'production-quality',
     description: (
       <>
         Quickly build and deploy production quality webservices that expose organization data as a service. Our APIs
@@ -64,7 +60,6 @@ const FeatureList: FeatureItem[] = [
     title: 'Open API',
     Svg: require('@site/static/img/openapi-logo.svg').default,
     scale: 0.8,
-    id: 'not-used',
     description: (
       <>
         Explore, understand, and compose queries against our CRUD API through generated OpenAPI documentation or GraphQL
@@ -76,7 +71,6 @@ const FeatureList: FeatureItem[] = [
     title: 'Container-Native Supported',
     Svg: require('@site/static/img/docker.svg').default,
     scale: 1,
-    id: 'not-used',
     description: (
       <>
         FastWS supports running in containerized environment out of the box, making its deployment fast and convenient.
@@ -87,7 +81,6 @@ const FeatureList: FeatureItem[] = [
     title: 'Open Source',
     Svg: require('@site/static/img/apache.svg').default,
     scale: 0.7,
-    id: 'not-used',
     description: (
       <>
         FastWS is 100% open source and available on <a href="https://github.com/QubitPi/fast-ws">Github</a>. Released
@@ -98,27 +91,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, scale, id, description}: FeatureItem) {
-  const {colorMode} = useColorMode()
-
-  let fill = undefined
-
-  if ( id === 'hashicorp-logo' && colorMode === 'light' ) {
-    fill = 'black'
-  } else if ( id === 'hashicorp-logo' && colorMode === 'dark') {
-    fill = 'white'
-  }
-
-  if ( id === 'production-quality' && colorMode === 'light' ) {
-    fill = 'black'
-  } else if ( id === 'production-quality' && colorMode === 'dark') {
-    fill = 'white'
-  }
-
+function Feature({title, Svg, scale, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} transform={"scale(" + scale + ")"} fill={fill} id={id} role="img" />
+        <Svg className={styles.featureSvg} transform={"scale(" + scale + ")"} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
