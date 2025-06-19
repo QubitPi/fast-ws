@@ -5973,6 +5973,7 @@ __metadata:
     "@docusaurus/types": "npm:3.5.2"
     "@mdx-js/react": "npm:^3.0.0"
     clsx: "npm:^2.0.0"
+    p5: "npm:^0.10.2"
     prism-react-renderer: "npm:^2.3.0"
     react: "npm:^18.0.0"
     react-dom: "npm:^18.0.0"
@@ -9799,6 +9800,13 @@ __metadata:
   version: 2.2.0
   resolution: "p-try@npm:2.2.0"
   checksum: 10c0/c36c19907734c904b16994e6535b02c36c2224d433e01a2f1ab777237f4d86e6289fd5fd464850491e940379d4606ed850c03e0f9ab600b0ebddb511312e177f
+  languageName: node
+  linkType: hard
+
+"p5@npm:^0.10.2":
+  version: 0.10.2
+  resolution: "p5@npm:0.10.2"
+  checksum: 10c0/6abf50a8ec2a90582292c2bcea3d4327b04922d2589c1889b2e8b66ba45635cfcc83eb358658031ee5ba652e786a3120f1a922b43e292b38c63a20da50fc6709
   languageName: node
   linkType: hard
 
