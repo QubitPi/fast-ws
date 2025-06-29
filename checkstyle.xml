@@ -407,8 +407,13 @@
         <property name="severity" value="error"/>
     </module>
     <module name="RegexpMultiline">
-        <property name="format" value="\}\R\R\s?\}"/>
-        <property name="message" value="Extra lines between braces"/>
+        <property name="format" value="\}\n\n\s?\}"/>
+        <property name="message" value="Extra lines between braces (Linux/Mac)"/>
+        <property name="severity" value="error"/>
+    </module>
+    <module name="RegexpMultiline">
+        <property name="format" value="\}\r\n\r\n\s?\}"/>
+        <property name="message" value="Extra lines between braces (Windows)"/>
         <property name="severity" value="error"/>
     </module>
     <module name="RegexpSingleline">
